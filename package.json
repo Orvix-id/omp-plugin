@@ -1,0 +1,49 @@
+{
+  "name": "@orvix-id/omp",
+  "version": "0.1.0",
+  "description": "Oh My Pi (omp) extension for the Orvix Coding Plan",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "omp",
+    "omp-plugin",
+    "oh-my-pi",
+    "orvix",
+    "orvix-coding",
+    "coding-plan"
+  ],
+  "homepage": "https://github.com/Orvix-id/omp-plugin#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orvix-id/omp-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Orvix-id/omp-plugin/issues"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "omp": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "check": "bun run typecheck && bun test",
+    "probe": "bun scripts/cache-probe.ts"
+  },
+  "peerDependencies": {
+    "@oh-my-pi/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.9.3"
+  }
+}
