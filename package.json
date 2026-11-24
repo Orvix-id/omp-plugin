@@ -1,6 +1,6 @@
 {
   "name": "@orvix-id/omp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Oh My Pi (omp) extension for the Orvix Coding Plan",
   "type": "module",
   "license": "MIT",

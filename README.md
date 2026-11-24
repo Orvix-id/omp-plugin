@@ -28,6 +28,8 @@ omp needs Bun 1.3.14 or newer.
 
 4. **Pick a model:** `omp --model orvix-coding/deepseek-v4-flash`.
 
+Full Coding Plan guide, including other clients: [docs.orvix.id/coding-plan](https://docs.orvix.id/coding-plan).
+
 ## Models
 
 The model list comes from `GET /coding/v1/models` when the key is available, so it always matches your plan.
@@ -61,6 +63,7 @@ or project to use more uncached tokens than OpenCode or Pi.
 | --- | --- |
 | `SyntaxError: Unexpected identifier` at startup | Bun is older than 1.3.14. |
 | No `orvix-coding` models | The extension is not installed, or `ORVIX_CODING_API_KEY` is not set in omp's environment. |
+| `403 coding_not_entitled` | The account has no active Coding Plan (or AI Plan) that covers the request. |
 | `401 coding:invoke scope required` | The key was created without the **Orvix Coding** scope. |
 | `429 coding_concurrency_exceeded` | Too many Coding requests in flight at once. omp retries; `retry_after` is a few seconds. |
 | `429 coding_quota_exceeded` | A 5-hour, weekly, or monthly window is used up. `resets_at` says when. |
