@@ -13,7 +13,7 @@ test("thinking uses omp's effort vocabulary without none", () => {
   const glm = toModelConfig("orvix/glm-5.2");
   expect(glm.id).toBe("glm-5.2");
   expect(glm.thinking).toEqual({ mode: "effort", efforts: ["minimal", "low", "medium", "high", "xhigh", "max"] });
-  expect(toModelConfig("orvix/glm-5.3-flash").thinking).toBeUndefined();
+  expect(toModelConfig("orvix/deepseek-v4-flash").thinking).toBeUndefined();
 });
 
 test("fetchModelIDs reads the OpenAI list shape", async () => {
